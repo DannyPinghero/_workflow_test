@@ -14,7 +14,7 @@ release_branch_name = github_context['sha']
 target_branch_name = 'uat'
 
 
-client = GHApi(owner = 'cultureiq', repo = 'app2', token = github_access_token)
+client = GHApi(owner = 'DannyPinghero', repo = '_workflow_test', token = github_access_token)
 
 try:
 	merge_response = client.repos.merge(target_branch_name, release_branch_name, 'Auto Backwards Merge From GH Robot!')
