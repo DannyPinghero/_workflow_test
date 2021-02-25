@@ -7,9 +7,9 @@ from ghapi.all import GhApi as GHApi
 
 
 
-github_access_token = os.environ['GITHUB_TOKEN']
+# github_access_token = os.environ['GITHUB_TOKEN']
 github_context = json.loads(os.environ['GITHUB_CONTEXT'])
-
+github_access_token = github_context['token']
 release_branch_name = github_context['sha']
 target_branch_name = 'uat'
 
